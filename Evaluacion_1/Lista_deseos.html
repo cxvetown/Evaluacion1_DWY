@@ -32,9 +32,15 @@
       display: none; 
     }
   }
+  .button{  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+  }
   </style>
 </head>
 <body>
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -50,40 +56,55 @@
         <li class="active"><a href="index.html">Inicio</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Registrarse</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
+        <li><a href="Registrarse.html">Registrarse</a></li>
+        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
       </ul>
     </div>
   </div>
 </nav>
- <div class="container marketing">
-<p>&nbsp</p>
-   
-  <div class="container marketing">
-
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <img src="images/monkey1.jpg" width="150" height="150">
-        <h2>Descuento: Peluche de mono</h2>
-        <p>Descuento especial para el peluche de mono  Valor real: 5.000 CLP  Valor descuento: 2.500 CLP</p>
-        <p><a class="btn btn-secondary" href="#" role="button">Comprar &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="images/yoshi1.jpg" width="150" height="150">
-        <h2>Descuento: Peluche de Yoshi</h2>
-        <p>Peluche original de Nintendo en oferta  Valor real: 7.000 CLP  Valor descuento: 3.500 CLP</p>
-        <p><a class="btn btn-secondary" href="#" role="button">Comprar &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="images/yoda1.jpg" width="150" height="150">
-        <h2>Descuento: Peluche de Yoda</h2>
-        <p>Original de LucasFilms peluche en oferta  Valor real: 6.000 CLP  Valor descuento: 3.000 CLP</p>
-        <p><a class="btn btn-secondary" href="#" role="button">Comprar &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-
-
+&nbsp;
+<table width="532" border="0" table style="margin: 0 auto;">
+  <tr>
+    <th width="142" scope="col">Nombre peluche</th>
+    <th width="131" scope="col">Valor esperado</th>
+    <th width="74" scope="col">Cantidad</th>
+    <th width="12" scope="col">&nbsp;</th>
+    <td width="8">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><input type="text" placeholder="ejemplo: peluche rana" name="peluche_1"/></td>
+    <td><input type="text" placeholder="ejemplo: 4000" name="precio_1"/></td>
+    <td><input type="text" placeholder="ejemplo: 3" name="cantidad_1"/></td>
+    <td><input type="button" value="Editar" /></td>
+    <td><input type="button" value="Borrar" /></td>
+  </tr>
+  <tr>
+    <td><input type="text" name="peluche_2"/></td>
+    <td><input type="text" name="precio_2"/></td>
+    <td><input type="text" name="cantidad_2"/></td>
+    <td><input type="button" value="Editar" /></td>
+    <td><input type="button" value="Borrar" /></td>
+  </tr>
+  <tr>
+    <td><input type="text" name="peluche_3"/></td>
+    <td><input type="text" name="precio_3"/></td>
+    <td><input type="text" name="cantidad_3"/></td>
+    <td><input type="button" value="Editar" /></td>
+    <td><input type="button" value="Borrar" /></td>
+  </tr>
+  <tr>
+    <td><input type="text" name="peluche_4"/></td>
+    <td><input type="text" name="precio_4"/></td>
+    <td><input type="text" name="cantidad_4"/></td>
+    <td><input type="button" value="Editar" /></td>
+    <td><input type="button" value="Borrar" /></td>
+  </tr>
+</table>
+&nbsp;
+<div class="button">
+	<input type="button" value="Aceptar"/>
+	<a href="index.html"><input type="button" value="Cancelar"></a>
+</div>
 <footer class="container">
     <p class="float-right"><a href="#">Inicio</a></p>
     <p>&copy; 2017-2020 Tienda Masitas, Inc. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
