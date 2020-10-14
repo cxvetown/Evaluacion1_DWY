@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style type="text/css">
+  <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
@@ -32,6 +32,10 @@
       display: none; 
     }
   }
+  .datos{width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  }
   </style>
 </head>
 <body>
@@ -44,12 +48,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="index.html">Tienda Masitas</a>
+      <a class="navbar-brand" href="#index.html">Tienda Masitas</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Inicio</a></li>
-        <li><a href="Carrito_compras.html">Carrito de compras</a></li>
+        <li class="active"><a href="#index.html">Inicio</a></li>
+        <li><a href="#section1">Quienes somos</a></li>
+        <li><a href="Lista_deseos.html">Lista de deseos</a></li>
+        <li><a href="carrito_compras.html">Carrito de compras</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="Registrarse.html">Registrarse</a></li>
@@ -58,28 +64,67 @@
     </div>
   </div>
 </nav>
- </ol>
-<p>&nbsp;</p>
-<hr class="featurette-divider">
-<div class="container text-center">    
-  <h3>Peluche De Cobaya</h3><br> 
-    <div class="row featurette">
-    <a name="section1"></a>
-      </div>    
-           <div align="top"><img src="images/cobaya1.jpg" width="340" height="340">
-           </div>
-           <div class="col-md-15 order-md-2">
-        <h2 class="featurette-heading">Los cobayas les encanta que los peinen </span></h2>
-        <div align="center"><header class="major"><h2>Valor: 1.990 CLP </h2>
-        &ensp;
-        <div align="top"><button type="button" class="jsx-1816208196 button button-primary button-primary-xtra-large">Agregar a la Bolsa<i class="csicon-arrow_right"></i></button>
-        </div>
-        &ensp;
-  <div class="container marketing">
-  &ensp;
+<div class="datos">
+<table width="358"  border="0" table style="margin: 0 auto;">
+<h2>Ingrese sus datos de compra</h2>
+  <tr>
+    <th width="132" scope="col">&nbsp;</th>
+    <th width="216" scope="col">&nbsp;</th>
+  </tr>
+  <tr>
+    <td>Tipo tarjeta</td>
+    <td><select name="TIPO TARJETA">
+ <option value="MasterCard">Mastercard</option>
+ <option value="Visa">Visa</option>
+ <option value="Cuenta Corriente">Cuenta corriente</option>
+ <option value="MACH">MACH</option>
+</select></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Numero tarjeta</td>
+    <td><input type="text" placeholder="9999-9999-9999-9999" name="numero_tarjeta_txt"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Año vigencia</td>
+    <td><input type="text" placeholder="2020" name="año_txt"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Nombre propietario</td>
+    <td><input type="text" placeholder="Pedro pascal" name="nombre_txt"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Codigo verificacion</td>
+    <td><input type="text" placeholder="9999" name="año_txt"></td>
+  </tr>
+</table>
+&nbsp;
+<div style="text-align: center">
+<button name="Aceptar_btn">Comprar</button>
+<a href="index.html"><input type="button" value="Cancelar"></a>
+</div>
+</div>
+
+&nbsp;
 <footer class="container">
     <p class="float-right"><a href="#">Inicio</a></p>
     <p>&copy; 2017-2020 Tienda Masitas, Inc. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
   </footer>
+
 </body>
 </html>

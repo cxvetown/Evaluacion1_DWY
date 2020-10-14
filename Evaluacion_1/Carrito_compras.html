@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tienda Masitas</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+    .carrito{  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#index.html">Tienda Masitas</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#index.html">Inicio</a></li>
+        <li><a href="#section1">Quienes somos</a></li>
+        <li><a href="Lista_deseos.html">Lista de deseos</a></li>
+        <li><a href="carrito_compras.html">Carrito de compras</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="Registrarse.html">Registrarse</a></li>
+        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<h2>Carrito de compras</h2>
+
+<div class="carrito">
+
+	<table width="425">
+  <tr>
+    <th width="118" scope="col">Producto</th>
+    <th width="118" scope="col">Valor</th>
+    <th width="0" scope="col">&nbsp;</th>
+    <th width="21" scope="col">&nbsp;</th>
+    <th width="28" scope="col">&nbsp;</th>
+    <th width="56" scope="col">&nbsp;</th>
+  </tr>
+  <tr>
+    <td><input type="text" placeholder="Peluche" readonly/></td>
+    <td><input type="text" placeholder="4.990" readonly/><td>
+    <td><input type="button" value="+" style="font-weight:bold; color:#0F0" /></td>
+    <td><input type="text" placeholder="1" readonly style="width : 30px; heigth : 30px"/></td>
+    <td><input type="button" value="-" style="font-weight:bold; color:#F00"/></td>
+    <td width="52"><input type="button" value="Eliminar"/></td>
+  </tr>
+  <tr>
+    <td><input type="text" placeholder="Peluche" readonly/></td>
+    <td><input type="text" placeholder="4.990" readonly/><td>
+    <td><input type="button" value="+" style="font-weight:bold; color:#0F0" /></td>
+    <td><input type="text" placeholder="1" readonly style="width : 30px; heigth : 30px"/></td>
+    <td><input type="button" value="-" style="font-weight:bold; color:#F00"/></td>
+    <td width="52"><input type="button" value="Eliminar"/></td>
+  </tr>
+  <tr>
+    <td><input type="text" placeholder="Peluche" readonly/></td>
+    <td><input type="text" placeholder="4.990" readonly/><td>
+    <td><input type="button" value="+" style="font-weight:bold; color:#0F0" /></td>
+    <td><input type="text" placeholder="1" readonly style="width : 30px; heigth : 30px"/></td>
+    <td><input type="button" value="-" style="font-weight:bold; color:#F00"/></td>
+    <td width="52"><input type="button" value="Eliminar"/></td>
+  </tr>
+  <tr>
+    <td><input type="text" placeholder="Peluche" readonly/></td>
+    <td><input type="text" placeholder="4.990" readonly/><td>
+    <td><input type="button" value="+" style="font-weight:bold; color:#0F0" /></td>
+    <td><input type="text" placeholder="1" readonly style="width : 30px; heigth : 30px"/></td>
+    <td><input type="button" value="-" style="font-weight:bold; color:#F00"/></td>
+    <td width="52"><input type="button" value="Eliminar"/></td>
+  </tr>
+  <tr>
+    <td><input type="text" placeholder="Peluche" readonly/></td>
+    <td><input type="text" placeholder="4.990" readonly/><td>
+    <td><input type="button" value="+" style="font-weight:bold; color:#0F0" /></td>
+    <td><input type="text" placeholder="1" readonly style="width : 30px; heigth : 30px"/></td>
+    <td><input type="button" value="-" style="font-weight:bold; color:#F00"/></td>
+    <td width="52"><input type="button" value="Eliminar"/></td>
+  </tr>
+  <tr>
+    <td><input type="text" placeholder="Peluche" readonly/></td>
+    <td><input type="text" placeholder="4.990" readonly/><td>
+    <td><input type="button" value="+" style="font-weight:bold; color:#0F0" /></td>
+    <td><input type="text" placeholder="1" readonly style="width : 30px; heigth : 30px"/></td>
+    <td><input type="button" value="-" style="font-weight:bold; color:#F00"/></td>
+    <td width="52"><input type="button" value="Eliminar"/></td>
+  </tr>
+</table>
+
+
+	<a href="Proceso_compra.html"><input type="button" value="Comprar"></a>
+	<a href="index.html"><input type="button" value="Cancelar"></a>
+</div>
+
+&nbsp;
+<footer class="container">
+    <p class="float-right"><a href="#">Inicio</a></p>
+    <p>&copy; 2017-2020 Tienda Masitas, Inc. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
+  </footer>
+
+</body>
+</html>
