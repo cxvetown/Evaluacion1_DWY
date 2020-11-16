@@ -95,6 +95,10 @@ def venta_perezoso_html():
 def venta_yoda_html():
     return render_template('venta_yoda.html')
 
+@app.route('/ejemplo')
+def ejemplo():
+    return render_template('ejemplo.html')
+
 @app.route('/venta_yoshi')
 def venta_yoshi_html():
     return render_template('venta_yoshi.html')
@@ -120,7 +124,8 @@ def Mantenedor_add_peluche():
             print('Error')
         return redirect(url_for('index'))
     #Eliminar
-def Mantenedor_delete_peluche():
+@app.route('/peluche_mantenedor', methods=['POST'])
+def peluche_delete():
     if request.method=='POST':
         try:
             auxbotonBorrar = request.form['Eliminar_btn']
@@ -129,11 +134,9 @@ def Mantenedor_delete_peluche():
                 Mantenedor_agregar_peluche.eliminar(aux_id)
 
                 flash('datos guardados')   
-            return redirect(url_for('index'))
 
         except:
             print("error insertar")   
-
 
 
 if __name__ == '__main__':

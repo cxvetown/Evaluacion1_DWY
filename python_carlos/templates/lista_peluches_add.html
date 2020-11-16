@@ -36,7 +36,7 @@
   </style>
 </head>
 <body>
-  <form name="form1" method="post" action="/peluche_delete"></form>
+
 {% with messages = get_flashed_messages() %}
   {% if messages %}
   <ul class="flashes">
@@ -72,10 +72,10 @@
 </nav>
 
 <h2 align="center">Listado peluches agregados</h2>
-
 <div class="carrito">
 
 	<table border="0" align="center">
+    <form name="form" method="post" action="/peluche_delete">
     <thead >
       <tr>
         <td>Codigo </td>
@@ -91,7 +91,6 @@
       <td>{{peluche.1 }}</td>
       <td>{{peluche.2 }}</td>
       <td>{{peluche.3 }}</td>
-      <td><a href="/delete/{{peluche.0}}">eliminar</a></td>
       
     </tr>
     {% endfor %}
@@ -101,8 +100,8 @@
 
     </tr>
   </tbody>
+  </form>
   </table>
-
 </div>
 
 &nbsp;
@@ -110,6 +109,5 @@
     <p class="float-right"><a href="#">Inicio</a></p>
     <p>&copy; 2017-2020 Tienda Masitas, Inc. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
   </footer>
-</form>
 </body>
 </html>

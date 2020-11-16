@@ -1,0 +1,7 @@
+Que se pueda iniciar sesion
+registrarse
+editar datos
+lista de deseo
+carrito de compras
+agregar peluches con y sin descuento (listo solo sin descuento)
+listado peluches
