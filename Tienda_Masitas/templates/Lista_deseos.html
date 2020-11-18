@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tienda Masitas</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  </style>
+</head>
+<body>
+  <form name="form" method="post" action="/mantenedor_lista_deseos">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/inicio">Tienda Masitas</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/inicio">Inicio</a></li>
+        <li><a href="/Carrito_compras">Carrito de compras</a></li>
+        <li><a href="/Lista_deseos">Lista de deseos</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/Registrarse">Registrarse</a></li>
+        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ </ol>
+<p>&nbsp;</p>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flashes">
+      {% for message in messages  %}
+        <li>{{message}}</li>
+      {% endfor%}
+    </ul>
+    {% endif %}
+  {% endwith %}
+  
+<H1 align="center"> Ingrese datos para agregar a la lista de deseos</H1>
+<p>&nbsp;</p>
+<table width="398" border="0" table style="margin: 0 auto;">
+  <tr>
+    <th width="131" scope="col">&nbsp;</th>
+    <th width="18" scope="col">&nbsp;</th>
+  </tr>
+  <tr>
+    <td>codigo</td>
+    <td>&nbsp;</td>
+    <td width="235"><input type="text" name="codigo_peluche" maxlength="50"></td>
+  </tr>
+    <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Nombre del peluche</td>
+    <td>&nbsp;</td>
+    <td width="235"><input type="text" name="nombre_peluche_txt" maxlength="50"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Valor esperado</td>
+    <td>&nbsp;</td>
+    <td><input type="text" name="valor_txt"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<div style="text-align: center">
+<button name="Aceptar_btn" value="Aceptar">Insertar</button
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+  <table border="1" align="center">
+
+      <tbody>
+        <tr>
+          <td width="118">Codigo </td>
+          <td width="97">Nombre </td>
+          <td width="84">Valor esperado</td>
+        </tr>
+      {% for deseos in deseos_add %}
+      <tr>
+        <td>{{deseos.0 }}</td>
+        <td>{{deseos.1 }}</td>
+        <td>{{deseos.2 }}</td>
+        
+      </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+  
+  <div style="text-align: center">
+<button name="Actualizar_btn" value="Actualizar">Actualizar</button>
+<button name="Eliminar_btn" value="Eliminar">Eliminar</button>
+<a href="/inicio"><input type="button" value="Cancelar"></a>
+</div>
+  
+</form>
+<footer class="container">
+  <p class="float-right"><a href="#">Inicio</a></p>
+    <p>&copy; 2017-2020 Tienda Masitas, Inc. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
+  </footer>
+
+</body>
+</html>
