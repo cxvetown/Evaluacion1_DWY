@@ -1,6 +1,6 @@
 #programa de arranque
-import Mantenedor_agregar_peluche, Mantenedor_carrito, Mantenedor_usuario, Mantenedor_agregar_peluche_desc, Mantenedor_lista_deseo
-import Clase_agregar_peluche, Clase_carrito_compras, Clase_usuario, Clase_agregar_peluche_desc, Clase_lista_deseos
+import Mantenedor_agregar_peluche, Mantenedor_carrito, Mantenedor_usuario, Mantenedor_agregar_peluche_desc, Mantenedor_lista_deseo, Mantenedor_proceso_compra
+import Clase_agregar_peluche, Clase_carrito_compras, Clase_usuario, Clase_agregar_peluche_desc, Clase_lista_deseos, Clase_proceso_compra
 import random
 from flask import Flask, render_template, request, flash, redirect, url_for 
 
@@ -467,7 +467,28 @@ def editar_peluche_descuento():
             #flash('datos No Actualizados') 
         return redirect(url_for('lista_peluches_add_desc_html'))
 
+@app.route('/transaccion_proceso_compra', methods=['POST'])
+def transaccion_proceso_compra():
+    if request.method=='POST':
+        try:
+            Auxaceptar = request.form['Aceptar_btn']
+            if Auxaceptar == 'Aceptar':
+                aux_codigo = Mantenedor_proceso_compra.generar_codigo()
+                aux_tipo = request.form['TIPO_TARJETA']
+                aux_numero = request.form['numero_tarjeta_txt']
+                aux_año = request.form['año_txt']
+                aux_nombre = request.form['nombre_txt']
+                aux_verificacion = request.form['verificacion_txt']
 
+                aux_add_proceso = Clase_proceso_compra.proceso_compra(aux_codigo,aux_tipo, aux_numero, aux_año, aux_nombre, aux_verificacion)
+                Mantenedor_proceso_compra.insertar(aux_add_proceso)
+                Mantenedor_proceso_compra.eliminar()
+                print('datos Eliminados')
+                #flash('datos Eliminados')
+        except:
+            print('datos No Eliminados')
+            #flash('datos No Eliminados') 
+        return redirect(url_for('index'))
 
 
 if __name__ == '__main__':

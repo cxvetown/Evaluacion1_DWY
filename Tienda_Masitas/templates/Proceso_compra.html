@@ -64,6 +64,7 @@
   </div>
 </nav>
 <div class="datos">
+  <form name="form" method="post" action="/transaccion_proceso_compra">
 <table width="358"  border="0" table style="margin: 0 auto;">
 <h2>Ingrese sus datos de compra</h2>
   <tr>
@@ -72,11 +73,11 @@
   </tr>
   <tr>
     <td>Tipo tarjeta</td>
-    <td><select name="TIPO TARJETA">
- <option value="MasterCard">Mastercard</option>
- <option value="Visa">Visa</option>
- <option value="Cuenta Corriente">Cuenta corriente</option>
- <option value="MACH">MACH</option>
+    <td><select name="TIPO_TARJETA">
+ <option >Mastercard</option>
+ <option >Visa</option>
+ <option>Cuenta corriente</option>
+ <option>MACH</option>
 </select></td>
   </tr>
   <tr>
@@ -109,14 +110,14 @@
   </tr>
   <tr>
     <td>Codigo verificacion</td>
-    <td><input type="text" placeholder="9999" name="año_txt"></td>
+    <td><input type="text" placeholder="9999" name="verificacion_txt"></td>
   </tr>
 </table>
 &nbsp;
 <div style="text-align: center">
-<button name="Aceptar_btn">Comprar</button>
-<a href="/inicio"><input type="button" value="Cancelar"></a>
-</div>
+  <button name="Aceptar_btn" value="Aceptar">Aceptar</button>
+  <a href="/inicio"><input type="button" value="Cancelar"></a>
+  </div>
 </div>
 
 &nbsp;
@@ -124,6 +125,6 @@
     <p class="float-right"><a href="#">Inicio</a></p>
     <p>&copy; 2017-2020 Tienda Masitas, Inc. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
   </footer>
-
+</form>
 </body>
 </html>
